@@ -6,6 +6,12 @@
 .sfdx/
 .localdevserver/
 
+#package.xml file
+package.xml
+
+# Buildfiles
+Buildfiles/
+
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
 

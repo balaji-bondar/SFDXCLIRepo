@@ -10,8 +10,7 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
       - npm install sfdx-cli --global
-      - sfdx update
-      - sfdx plugins:install dependencies-cli
+      - npm update --global sfdx-cli
   build:
     commands:
       - echo Build started on `14/05/2020`

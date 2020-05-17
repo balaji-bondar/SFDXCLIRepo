@@ -18,7 +18,7 @@ phases:
       - echo $salesforceSITUserName
       - echo $salesforceSITClientId
       #- sfdx --help
-      - sfdx force:auth:logout --targetusername balajibondar@gmail.com.cicd
+      #- sfdx force:auth:logout --targetusername balajibondar@gmail.com.cicd
       - sfdx force:auth:jwt:grant --clientid 3MVG97quAmFZJfVyq3tLvSSXPZetZl3qbVbXU9EanjeRiVjbfUuab7ULGYnFCgt1Shpu37vRZ9sA5KwshFfhK --jwtkeyfile ./buildfiles/server.key --username balajibondar@gmail.com.cicd --instanceurl https://login.salesforce.com
       #- sfdx force:auth:jwt:grant --clientid 3MVG97quAmFZJfVyq3tLvSSXPZetZl3qbVbXU9EanjeRiVjbfUuab7ULGYnFCgt1Shpu37vRZ9sA5KwshFfhK --jwtkeyfile ./buildfiles/server.key --username balajibondar@gmail.com.cicd --instanceurl https://cicddemodevhub-dev-ed.lightning.force.com/
       #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10

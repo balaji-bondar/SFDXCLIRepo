@@ -1,6 +1,10 @@
 version: 0.2
 # Defining default values for all jobs
 defaults: &defaults
+env:
+  variables:
+    SFDX_USE_GENERIC_UNIX_KEYCHAIN: "true"
+
 phases:
   pre_build:
     commands:
@@ -12,7 +16,6 @@ phases:
       - echo $salesforceSITInstanceURL
       - echo $salesforceSITUserName
       - echo $salesforceSITClientId
-      -z "${SFDX_USE_GENERIC_UNIX_KEYCHAIN}" 
       - sfdx --help
       - sfdx force:auth:jwt:grant --clientid 3MVG97quAmFZJfVyq3tLvSSXPZetZl3qbVbXU9EanjeRiVjbfUuab7ULGYnFCgt1Shpu37vRZ9sA5KwshFfhK --jwtkeyfile ./buildfiles/server.key --username balajibondar@gmail.com.cicd
       #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10

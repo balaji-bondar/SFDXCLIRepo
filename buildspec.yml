@@ -22,4 +22,4 @@ phases:
       #- sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL -a SIT
       #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10
       - ./jfrog rt config --url https://sdc.jfrog.io/artifactory/ --user salesforce-ci --password AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d --interactive=false
-      
+      - ./jfrog rt u /codebuild/output/src874496831/src/github.com/balaji-bondar/SFDXCLIRepo/master --build-name=MySFSFDXCLIRepoMaterBuild --build-number=12345

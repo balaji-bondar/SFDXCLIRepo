@@ -14,9 +14,9 @@ phases:
   build:
     commands:
       - echo Build started on `14/05/2020`
-      - echo $salesforceSITInstanceURL
-      - echo $salesforceSITUserName
-      - echo $salesforceSITClientId
+      - echo $salesforceInstanceURL
+      - echo $salesforceUserName
+      - echo $salesforceClientId
       #- sfdx --help
       #- sfdx force:auth:logout --targetusername balajibondar@gmail.com.cicd
       - sfdx force:auth:jwt:grant --clientid 3MVG97quAmFZJfVyq3tLvSSXPZetZl3qbVbXU9EanjeRiVjbfUuab7ULGYnFCgt1Shpu37vRZ9sA5KwshFfhK --jwtkeyfile ./server.key --username balajibondar@gmail.com.cicd --instanceurl https://login.salesforce.com

@@ -18,7 +18,6 @@ phases:
       - echo $salesforceUserName
       - echo $salesforceClientId
       #- sfdx --help
-      - sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL
-      #- sfdx force:auth:jwt:grant --clientid 3MVG97quAmFZJfVyq3tLvSSXPZetZl3qbVbXU9EanjeRiVjbfUuab7ULGYnFCgt1Shpu37vRZ9sA5KwshFfhK --jwtkeyfile ./server.key --username balajibondar@gmail.com.cicd --instanceurl https://login.salesforce.com
-      #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10
+      - sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL -a SIT
+      - sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10
       

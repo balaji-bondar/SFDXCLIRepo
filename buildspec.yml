@@ -18,6 +18,7 @@ phases:
       - echo $salesforceInstanceURL
       - echo $salesforceUserName
       - echo $salesforceClientId
+      - echo $CODEBUILD_SOURCE_REPO_URL
       #- sfdx --help
       #- sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL -a SIT
       #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10

@@ -14,11 +14,11 @@ phases:
       - curl -fL https://getcli.jfrog.io | sh
   build:
     commands:
-      - echo Build started on `14/05/2020`
+      - echo Build started on `21/05/2020`
       - echo $salesforceInstanceURL
       - echo $salesforceUserName
       - echo $salesforceClientId
       #- sfdx --help
-      - sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL -a SIT
+      #- sfdx force:auth:jwt:grant --clientid $salesforceClientId --jwtkeyfile ./server.key --username $salesforceUserName --instanceurl $salesforceInstanceURL -a SIT
       #- sfdx force:mdapi:deploy -l RunLocalTests -c -d ./force-app/main/default/ -u SIT -w 10
-      
+      -./jfrog rt config --url https://sdc.jfrog.io/artifactory/gems/ --user salesforce-ci --apikey AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d --interactive=false

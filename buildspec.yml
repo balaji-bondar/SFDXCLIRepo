@@ -8,13 +8,12 @@ env:
 phases:
   pre_build:
     commands:
-      - echo Build started on `date`
       #- npm install sfdx-cli --global
       #- npm update --global sfdx-cli
       - curl -fL https://getcli.jfrog.io | sh
   build:
     commands:
-      - echo Build started...
+      - echo Build started on 'date'
       - echo $salesforceInstanceURL
       - echo $salesforceUserName
       - echo $salesforceClientId

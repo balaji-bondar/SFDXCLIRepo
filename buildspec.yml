@@ -32,7 +32,7 @@ phases:
     commands:
       - ./jfrog rt config --url https://sdc.jfrog.io/artifactory/ --user salesforce-ci --password AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d --interactive=false
       - ./jfrog rt u $CODEBUILD_SRC_DIR gems/ --build-name=QABuild --build-number=12345
-      - curl -X PUT -u salesforce-ci:AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d -T https://sdc.jfrog.io/artifactory/gems/ "https://github.com/balaji-bondar/SFDXCLIRepo.git"
+      - curl -X PUT -u salesforce-ci:AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d -T https://sdc.jfrog.io/artifactory/gems-remote/ "https://github.com/balaji-bondar/SFDXCLIRepo.git"
 
 artifacts:
   files:

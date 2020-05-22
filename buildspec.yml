@@ -13,7 +13,7 @@ phases:
       - curl -fL https://getcli.jfrog.io | sh
   build:
     commands:
-      - echo Build started on $(date +%Y-%m-%d)
+      - echo Build started on $(Get-Date -UFormat "%Y%m%d-%H%M%S")
       - echo $salesforceInstanceURL
       - echo $salesforceUserName
       - echo $salesforceClientId

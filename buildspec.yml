@@ -18,6 +18,7 @@ phases:
       - echo $salesforceUserName
       - echo $salesforceClientId
       - echo $CODEBUILD_SOURCE_REPO_URL
+      - echo $CODEBUILD_BUILD_NUMBER
       - echo $CODEBUILD_SRC_DIR
       
       #- sfdx --help

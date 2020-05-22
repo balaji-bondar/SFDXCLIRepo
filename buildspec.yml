@@ -22,8 +22,6 @@ phases:
       - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
       - echo $CODEBUILD_SOURCE_VERSION
       - echo $CODEBUILD_START_TIME
-      - echo $HOME
-      
       - echo $CODEBUILD_SRC_DIR
       
       #- sfdx --help

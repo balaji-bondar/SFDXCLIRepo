@@ -8,7 +8,7 @@ env:
 phases:
   pre_build:
     commands:
-      - echo pre_build phase,installation started...
+      - echo Build started on `date`
       #- npm install sfdx-cli --global
       #- npm update --global sfdx-cli
       - curl -fL https://getcli.jfrog.io | sh

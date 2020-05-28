@@ -1,5 +1,5 @@
 version: 0.2
-# Defining default values for all jobs updated file
+# Defining default values for all jobs updated file 2
 defaults: &defaults
 env:
   variables:

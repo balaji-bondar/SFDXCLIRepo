@@ -10,7 +10,7 @@ phases:
     commands:
       - npm install sfdx-cli --global
       #- npm update --global sfdx-cli
-      - curl -fL https://getcli.jfrog.io | sh
+      #- curl -fL https://getcli.jfrog.io | sh
   build:
     commands:
       - echo Build started...
@@ -31,9 +31,9 @@ phases:
   post_build:
     commands:
       #- ls $CODEBUILD_SRC_DIR
-      - zip $CODEBUILD_SRC_DIR/MyBuild.zip -r $CODEBUILD_SRC_DIR * 
+      #- zip $CODEBUILD_SRC_DIR/MyBuild.zip -r $CODEBUILD_SRC_DIR * 
       #- ls $CODEBUILD_SRC_DIR
-      - ./jfrog rt config --url https://sdc.jfrog.io/artifactory/ --user salesforce-ci --password AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d --interactive=false
-      - ./jfrog rt u $CODEBUILD_SRC_DIR/MyBuild.zip libs-release-local/ --build-name=QABuild --build-number=12345
+      #- ./jfrog rt config --url https://sdc.jfrog.io/artifactory/ --user salesforce-ci --password AKCp5fTQixdiS5iECcdfqYug9kkW2CJUrb9GJz3MechLrfemcasce5cJXxG1RW1fLDd94rw5d --interactive=false
+      #- ./jfrog rt u $CODEBUILD_SRC_DIR/MyBuild.zip libs-release-local/ --build-name=QABuild --build-number=12345
       
  

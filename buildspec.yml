@@ -8,7 +8,7 @@ env:
 phases:
   pre_build:
     commands:
-      #- npm install sfdx-cli --global
+      - npm install sfdx-cli --global
       #- npm update --global sfdx-cli
       - curl -fL https://getcli.jfrog.io | sh
   build:
